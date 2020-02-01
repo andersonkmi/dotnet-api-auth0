@@ -37,7 +37,7 @@ namespace Glossary
         public ActionResult<GlossaryItem> Get(string term)
         {
             var glossaryItem = Glossary.Find(item =>
-                    item.Term.Equals(term, System.StringComparison.InvariantCultureIgnoreCase));
+                    item.Term.Equals(term, StringComparison.InvariantCultureIgnoreCase));
 
             if (glossaryItem == null)
             {
